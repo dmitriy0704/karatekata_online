@@ -15,3 +15,4 @@ use App\Http\Controllers\VdsController;
 */
 
 Route::get('/', [VdsController::class, 'index']);
+Route::get('/{vd}',[VdsController::class,'detail']);
