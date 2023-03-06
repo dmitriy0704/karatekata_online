@@ -14,5 +14,5 @@ use App\Http\Controllers\VdsController;
 |
 */
 
-Route::get('/', [VdsController::class, 'index']);
-Route::get('/{vd}',[VdsController::class,'detail']);
+Route::get('/', [VdsController::class, 'index'])->name('index');
+Route::get('/{vd}',[VdsController::class,'detail'])->name('detail');

@@ -3,7 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Все участники</title>
+    <title>@yield('title') :: Участники</title>
+    <link rel="stylesheet" type="text/css" href="/styles/main.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
@@ -19,32 +20,8 @@
 </head>
 <body>
 <div class="container">
-    @extends('layouts.base')
-    @section('title','Главная')
-@section('main')
-        <h2 class="my-3 text-center">Все учстники</h2>
-    @if (count($vds) > 0)
-            <table class="table table-striped">
-                <thead>
-                <tr>
-                    <th>Участник</th>
-                    <th>Видео</th>
-                </tr>
-                </thead>
-                <tbody>
-                @foreach ($vds as $vd)
-                    <tr>
-                        <td><h3>{{ $vd->title }}</h3></td>
-                        <td>
-                            <p>{{ $vd->content }}</p>
-                            <p><a href="/{{ $vd->id }}/">Подробнее...</a></p>
-                        </td>
-                    </tr>
-                @endforeach
-                </tbody>
-            </table>
-        @endif
-    @endsection
+    <h1 class="base my-3 text-left">КАТА ОНЛАЙН</h1>
+    @yield('main')
 </div>
 </body>
 </html>

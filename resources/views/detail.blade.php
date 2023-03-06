@@ -19,12 +19,17 @@
 </head>
 <body>
 <div class="container">
-    <h1 class="my-3 text-center">Объявления</h1>
-    <h2>{{ $vd->title }}</h2>
-    <p>{{ $vd->content }}</p>
-    <p>{{ $vd->ball }}</p>
-    <p>{{ $vd->place }}</p>
-    <p><a href="/">На главную</a></p>
+
+    @extends('layouts.base')
+    @section('title',$vd->title)
+    @section('main')
+        <h2 class="my-3 text-center">Участник</h2>
+        <h2>{{ $vd->title }}</h2>
+        <p>{{ $vd->content }}</p>
+        <p>{{ $vd->ball }}</p>
+        <p>{{ $vd->place }}</p>
+        <p><a href="{{ route('index') }}">На главную</a></p>
+    @endsection('main')
 </div>
 </body>
 </html>
