@@ -21,6 +21,23 @@
 <body>
 <div class="container">
     <h1 class="base my-3 text-left">КАТА ОНЛАЙН</h1>
+    <nav class="navbar navbar-light bg-light">
+        <a href="{{ route('index') }}"
+           class="nav-item nav-link">Главная</a>
+        <a href="{{ route('register') }}"
+           class="nav-item nav-link">Регистрация</a>
+        <a href="{{ route('login') }}"
+           class="nav-item nav-link">Вход</a>
+        <a href="{{ route('home') }}"
+           class="nav-item nav-link">Мои Видеоролики</a>
+
+        <form action="{{ route('logout') }}" method="post" class="form-check-inline">
+            @csrf
+            <input type="submit" class="btn btn-danger" value="Выход">
+        </form>
+
+    </nav>
+
     @yield('main')
 </div>
 </body>

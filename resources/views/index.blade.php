@@ -21,7 +21,7 @@
     @extends('layouts.base')
     @section('title','Главная')
 @section('main')
-        <h2 class="my-3 text-center">Все учстники</h2>
+        <h2 class="my-3 text-center">Все участники</h2>
     @if (count($vds) > 0)
             <table class="table table-striped">
                 <thead>

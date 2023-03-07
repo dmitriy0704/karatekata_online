@@ -17,8 +17,8 @@ return new class extends Migration {
             $table->float('price');
             $table->float('ball');
             $table->integer('place');
-            $table->integer('athlete_id')->unsigned();
-            $table->foreign('athlete_id')->references('id')->on('athlete');
+            $table->integer('user_id')->unsigned();
+            $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
             $table->index('created_at');
         });

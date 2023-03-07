@@ -26,7 +26,7 @@
                 <p>{{ $vd->content }}</p>
                 <p>{{ $vd->ball }}</p>
                 <p>{{ $vd->place }}</p>
-                <p>Спортсмен: {{ $vd->athlete->name }}</p>
+                <p>Спортсмен: {{ $vd->user->name }}</p>
                 <p><a href="{{ route('index') }}">На главную</a></p>
             @endsection('main')
         </div>
