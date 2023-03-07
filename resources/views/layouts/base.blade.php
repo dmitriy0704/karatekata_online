@@ -17,7 +17,7 @@
             integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
             crossorigin="anonymous"></script>
 </head>
-</head>
+
 <body>
 <div class="container">
     <h1 class="base my-3 text-left">КАТА ОНЛАЙН</h1>
