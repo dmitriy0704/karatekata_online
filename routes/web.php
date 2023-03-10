@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\VdsController;
-
+use App\Http\Controllers\HomeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,5 +16,7 @@ use App\Http\Controllers\VdsController;
 
 Route::get('/', [VdsController::class, 'index'])->name('index');
 Auth::routes();
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/home/add', [HomeController::class, 'showAddVdForm'])->name('vd.add');
+Route::get('/home', [HomeController::class, 'storeVd'])->name('bb.store');
 Route::get('/{vd}',[VdsController::class,'detail'])->name('detail');

@@ -20,24 +20,27 @@
 <div class="container">
     @extends('layouts.base')
     @section('title','Главная')
-@section('main')
+    @section('main')
         <h2 class="my-3 text-center">Все участники</h2>
-    @if (count($vds) > 0)
+        @if (count($vds) > 0)
             <table class="table table-striped">
                 <thead>
                 <tr>
                     <th>Участник</th>
                     <th>Видео</th>
+                    <th>Категория</th>
                 </tr>
                 </thead>
                 <tbody>
                 @foreach ($vds as $vd)
                     <tr>
-                        <td><h3>{{ $vd->title }}</h3></td>
-                        <td>
-                            <p>{{ $vd->content }}</p>
-                            <p>{{ $vd->category }}</p>
+                        <td><h3>{{ $vd->title }}</h3>
                             <p><a href="/{{ $vd->id }}/">Подробнее...</a></p>
+                        </td>
+                        <td><p>{{ $vd->content }}</p></td>
+                        <td>
+                            <p>{{ $vd->category }}</p>
+
                         </td>
                     </tr>
                 @endforeach

@@ -15,9 +15,9 @@
             <tbody>
             @foreach($vds as $vd)
                 <tr>
-                    <td><h3>{{ $bb->title }}</h3></td>
-                    <td><h3>{{ $bb->category }}</h3></td>
-                    <td><h3>{{ $bb->content }}</h3></td>
+                    <td><h5>{{ $vd->title }}</h5></td>
+                    <td><span>{{ $vd->category }}</span></td>
+                    <td><span>{{ $vd->content }}</span></td>
                     <td>
                         <a href="">Изменить</a> <br>
                         <a href="">Удалить</a>
