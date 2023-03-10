@@ -18,5 +18,5 @@ Route::get('/', [VdsController::class, 'index'])->name('index');
 Auth::routes();
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/home/add', [HomeController::class, 'showAddVdForm'])->name('vd.add');
-Route::get('/home', [HomeController::class, 'storeVd'])->name('bb.store');
+Route::get('/home', [HomeController::class, 'storeVd'])->name('vd.store');
 Route::get('/{vd}',[VdsController::class,'detail'])->name('detail');
