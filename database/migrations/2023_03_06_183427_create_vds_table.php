@@ -13,11 +13,11 @@ return new class extends Migration {
         Schema::create('vds', function (Blueprint $table) {
             $table->id();
             $table->string('title', 50);
-            $table->text('content');
-            $table->float('price');
-            $table->float('ball');
-            $table->integer('place');
-            $table->text('category');
+            $table->text('content')->nullable();
+            $table->float('price')->nullable();
+            $table->float('ball')->nullable();
+            $table->integer('place')->nullable();
+            $table->text('category')->nullable();
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->timestamps();
             $table->index('created_at');

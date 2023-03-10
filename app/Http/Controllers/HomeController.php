@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Vd;
 
 class HomeController extends Controller
 {
@@ -40,5 +41,18 @@ class HomeController extends Controller
             'category' => $request->category
         ]);
         return redirect()->route('home');
+    }
+
+    public function showEditVdForm(Vd $vd)
+    {
+        return view('vd_edit', ['vd' => $vd]);
+    }
+
+    public function updateVd(Request $request, Vd $vd){
+        $vd->fill(['title' => $request->title,
+            'content' => $request->content,
+            'price' => $request->category]);
+        $vd->sаvе();
+        return redirect() ->route('home')
     }
 }

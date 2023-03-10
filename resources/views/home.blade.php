@@ -1,7 +1,7 @@
 @extends('layouts.base')
 @section('title', 'Мои видеоролики')
 @section('main')
-    <p class="text-right"><a href="">Добавить видеоролик</a></p>
+    <p class="text-right"><a href="{{ route('vd.add') }}">Добавить видеоролик</a></p>
     @if(count($vds)>0)
         <table class="table table-striped">
             <thead>
