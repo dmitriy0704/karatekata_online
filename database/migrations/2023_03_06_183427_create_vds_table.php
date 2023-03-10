@@ -17,8 +17,8 @@ return new class extends Migration {
             $table->float('price');
             $table->float('ball');
             $table->integer('place');
-            $table->integer('user_id')->unsigned();
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->integer('category');
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->timestamps();
             $table->index('created_at');
         });

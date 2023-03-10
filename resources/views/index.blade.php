@@ -36,6 +36,7 @@
                         <td><h3>{{ $vd->title }}</h3></td>
                         <td>
                             <p>{{ $vd->content }}</p>
+                            <p>{{ $vd->category }}</p>
                             <p><a href="/{{ $vd->id }}/">Подробнее...</a></p>
                         </td>
                     </tr>

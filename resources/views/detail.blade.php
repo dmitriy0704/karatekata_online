@@ -24,6 +24,7 @@
                 <h2 class="my-3 text-center">Участник</h2>
                 <h2>{{ $vd->title }}</h2>
                 <p>{{ $vd->content }}</p>
+                <p>{{ $vd->category }}</p>
                 <p>{{ $vd->ball }}</p>
                 <p>{{ $vd->place }}</p>
                 <p>Спортсмен: {{ $vd->user->name }}</p>

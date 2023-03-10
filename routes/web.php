@@ -15,8 +15,6 @@ use App\Http\Controllers\VdsController;
 */
 
 Route::get('/', [VdsController::class, 'index'])->name('index');
-Route::get('/{vd}',[VdsController::class,'detail'])->name('detail');
-
 Auth::routes();
-
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/{vd}',[VdsController::class,'detail'])->name('detail');
